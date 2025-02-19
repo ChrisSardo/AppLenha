@@ -15,7 +15,8 @@ O desafio se dá por estar em um ambiente novo, com uma linguagem nova, e trabal
 Não está bem bonitinho e formatado, muito menos feito da forma certa, mas está funcional. Ainda irei trabalhar para lapidar o projeto.
 
 <h1>Como testar?</h1>
-<p>Explicação raza e rapida:</p>
+<p>Explicação raza e rapida:
+
 - Abra uma planilha no Sheets
 - No menu, vá até "Extensões"
 - Em "App Script"
@@ -26,4 +27,4 @@ Não está bem bonitinho e formatado, muito menos feito da forma certa, mas est�
 - "Nova Implantação", dê uma descrição e siga em "Implantar"
 - Pronto agora é só acessar o link disponibilizado e testar
 
-OBS: Falta muita coisa ainda mas ta no caminho
+OBS: Falta muita coisa ainda mas ta no caminho</p>

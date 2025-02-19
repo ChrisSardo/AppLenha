@@ -1,0 +1,44 @@
+function onEdit(r) {
+  const sheet = r.range.getSheet(); // Obtém a planilha onde ocorreu a edição
+  const editedCell = r.range; // Célula editada
+  const editedColumn = 1; // Coluna monitorada
+  const verifyColumn = 3; // Coluna para verificar os códigos
+  const timestampColumn1 = 23; // Primeira coluna para inserir o texto
+
+  // Verifica se estamos na aba certa e na coluna correta
+  if (sheet.getName() === "Home" && editedCell.getColumn() === editedColumn && editedCell.getRow() > 1) {
+    const row = editedCell.getRow(); // Linha da célula editada
+    const forn = sheet.getRange(row, verifyColumn).getValue(); // Valor da coluna de verificação
+    const fornT = sheet.getRange(row, timestampColumn1); // Primeira célula de destino
+
+
+    if (editedCell.getValue() !== "") {
+      // Determina o texto baseado no código
+      let text = "";
+      switch (forn) {
+        case 128384:
+          text = "MICHALAK";
+          break;
+        case 200303:
+          text = "DUWE";
+          break;
+        case 127527:
+          text = "ARLINDO";
+          break;
+        case 128383:
+          text = "ARTHUR";
+          break;
+        default:
+          text = "Código desconhecido";
+          break;
+      }
+
+      // Atualiza a célula
+      //fornT.setValue(text);
+      
+    } else {
+      // Limpa a célula se a célula monitorada for apagada
+      fornT.clearContent();
+    }
+  }
+}
